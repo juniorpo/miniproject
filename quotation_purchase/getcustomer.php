@@ -14,12 +14,10 @@ if(!$con)
 
 $result = mysqli_query($con,$sql); 
 $row = mysqli_fetch_array($result);
-echo "<b>Customer : </b><br> &nbsp;&nbsp;&nbsp;&nbsp;".$row['sup_no']." 
-
-      "."<br> <b>Contact :</b>
-      <br>".$row['sup_company']."
-      <br>".$row['sup_contact']." 
-      <br>".$row['sup_telephone']."  
-      <br>".$row['sup_email'];
+echo "<b>Supplier : </b><br> &nbsp;&nbsp;&nbsp;&nbsp;".$row['sup_no']." ".$row['sup_company']."
+      <br> <b>Contact :</b>
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;".$row['sup_contact']." 
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;".$row['sup_telephone']."  
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;".$row['sup_email'];
 
 ?>
