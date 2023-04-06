@@ -66,11 +66,11 @@ $_SESSION["item_session"] = "";
     SELECT AUTO_INCREMENT
     FROM information_schema.TABLES
     WHERE TABLE_SCHEMA = "mycompany"
-    AND TABLE_NAME = "sales_orders"
+    AND TABLE_NAME = "purchase_orders"
   '); 
   $row = mysqli_fetch_array($result);
-  $next_so_no = $row["AUTO_INCREMENT"];
-  $next_so_no = str_pad((string)$next_so_no,5, "0", STR_PAD_LEFT); 
+  $next_po_no = $row["AUTO_INCREMENT"];
+  $next_po_no = str_pad((string)$next_po_no,5, "0", STR_PAD_LEFT); 
   $currentDate = date('Y-m-d');
   ?>
   
@@ -80,7 +80,7 @@ $_SESSION["item_session"] = "";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>SALE</h1>
+            <h1>PURCHASE</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -117,8 +117,8 @@ $_SESSION["item_session"] = "";
                         <div class="col-md-6">
                                                         <div class="form-group">
                                                         <!-- <label class="col-form-label">Quotation Number</label>  -->
-                                                        <label class="col-form-label"><?php echo "<h3>SO".$next_so_no."<h3>";?></label> 
-                                                        <input class="form-control" type="hidden" name="so_no" value="<?php echo $next_so_no;?>"> 
+                                                        <label class="col-form-label"><?php echo "<h3>PO".$next_po_no."<h3>";?></label> 
+                                                        <input class="form-control" type="hidden" name="po_no" value="<?php echo $next_po_no;?>"> 
                                                         </div>
                                                         <div class="form-group">
                                                         <label class="col-form-label">PO Date</label> 

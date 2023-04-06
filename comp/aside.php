@@ -132,6 +132,12 @@
                             <i class="fas fa-circle nav-icon"></i>
                             <p>Supplier</p>
                           </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="../quotation_purchase/quotation_list.php" class="nav-link">
+                            <i class="fas fa-circle nav-icon"></i>
+                            <p>Quotation</p>
+                          </a>
                         </li>           
                       </li>
                     <?php                     

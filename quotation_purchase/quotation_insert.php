@@ -1,13 +1,9 @@
 <?php
 include "../config.php";
 
-$so_no=$_POST['so_no'];
-$so_date=$_POST['so_date'];
-$cust_no=$_POST['cust_no'];
-$cust_po_no=$_POST['cust_po_no'];
-$cust_po_date=$_POST['cust_po_date'];
-$ship_via=$_POST['ship_via'];
-$fob_term=$_POST['fob_term'];
+$po_no = $_POST["po_no"];
+$po_date = $_POST["po_date"];
+$sup_no = $_POST["sup_no"];
 
 $con = mysqli_connect($servername,$username,$password,$dbname);
 if(mysqli_connect_errno()) 
@@ -15,10 +11,8 @@ if(mysqli_connect_errno())
     echo "Fail to connect to MySQL"; exit();
 }
 
-$sql= "INSERT INTO sales_orders  (so_no,so_date,cust_no,cust_po_no,cust_po_date,ship_via,fob_term,order_status) 
-               VALUES ('$so_no','$so_date','$cust_no',
-                        '$cust_po_no','$cust_po_date','$ship_via',
-                        '$fob_term','quotation')";
+$sql= "INSERT INTO purchase_orders  (po_no,po_date,order_status,sup_no) 
+               VALUES ('$po_no','$po_date','quotation','$sup_no')";
 //echo $sql;exit();
 
 if (mysqli_query($con, $sql)) {
@@ -44,8 +38,8 @@ $nettotal=0;
 foreach ($item_session as &$data)
 {
 echo $data->id."  ".$data->q."<br>";
-$sql= "INSERT INTO sale_relations (so_no,item_no,qty_ordered)  
-               VALUES ('$so_no','$data->id','$data->q')";
+$sql= "INSERT INTO purchase_relations (po_no,item_no,qty_ordered)  
+               VALUES ('$po_no','$data->id','$data->q')";
              echo $sql;
   
 if (mysqli_query($con, $sql)) {
