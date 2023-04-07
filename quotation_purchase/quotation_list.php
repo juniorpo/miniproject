@@ -121,9 +121,9 @@ include "../users/checkmodule.php"
                         ?>
                     <!-- <td><button type="button" class="btn btn-success editbtn" > Show </button></td> -->
                     <?php 
-                     echo "<td>"; echo "<a href='quotation_show.php?so_no=".$row['po_no']."'><button class='btn btn-success'>Show</button></a>";  
+                     echo "<td>"; echo "<a href='quotation_show.php?po_no=".$row['po_no']."'><button class='btn btn-success'>Show</button></a>";  
                      echo "</td>";
-                     echo "<td>"; echo "<a href='quotation_delete.php?so_no=".$row['po_no']."' onclick='return chkConfirm();'><button class='btn btn-danger'>Delete</button></a>";  
+                     echo "<td>"; echo "<a href='quotation_delete.php?po_no=".$row['po_no']."' onclick='return chkConfirm();'><button class='btn btn-danger'>Delete</button></a>";  
                     echo "</td>";
                     ?>
                   </tr>
