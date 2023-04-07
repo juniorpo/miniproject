@@ -1,5 +1,5 @@
 <?php
-$so_no=$_GET['so_no'];
+$po_no=$_GET['po_no'];
 
 include "../config.php";
 $conn = mysqli_connect($servername,$username,
@@ -8,14 +8,13 @@ if(!$conn)
 {  die("Error ".mysqli_connect_error()); }
 
 
-$sql =  "DELETE FROM sales_orders
-         WHERE so_no='$so_no'
+$sql =  "DELETE FROM purchase_orders
+         WHERE po_no='$po_no'
          ";
-                   
 if(mysqli_query($conn,$sql))
 {
-  $sql2 =  "DELETE FROM sale_relations
-  WHERE so_no='$so_no'
+  $sql2 =  "DELETE FROM purchase_relations
+  WHERE po_no='$po_no'
   ";
   if(mysqli_query($conn,$sql2))
   {

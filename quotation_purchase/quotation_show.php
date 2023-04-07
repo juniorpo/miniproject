@@ -127,11 +127,6 @@ $_SESSION["item_session"] = "";
                                                         $newDate = date("d-m-Y", strtotime($row['po_date']));
                                                         echo $newDate;?>                                                       
                                                         </div> </div>
-                                                        <div class="form-group">
-                                                        <label class="col-form-label">Customer PO</label> 
-                                                        <div><?php echo $row['po_date'];?></div></div>
-                                                        
-                                                        
                                                         
                           </div>
                          <div class="col-md-6">
@@ -141,7 +136,9 @@ $_SESSION["item_session"] = "";
 
                                                         <div class="form-group">
                                                         <label class="col-form-label">Contact</label> 
-                                                        <div><?php echo $row['sup_contact']." ".$row['sup_telephone']." ".$row['sup_email']."";?></div>
+                                                        <div><?php echo $row['sup_contact']." <br>
+                                                        ".$row['sup_telephone']." <br>
+                                                        ".$row['sup_email']."";?></div>
                                                       
                                                   
                                                       

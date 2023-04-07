@@ -123,7 +123,7 @@ include "../users/checkmodule.php"
                     <?php 
                      echo "<td>"; echo "<a href='quotation_show.php?po_no=".$row['po_no']."'><button class='btn btn-success'>Show</button></a>";  
                      echo "</td>";
-                     echo "<td>"; echo "<a href='quotation_delete.php?po_no=".$row['po_no']."' onclick='return chkConfirm();'><button class='btn btn-danger'>Delete</button></a>";  
+                     echo "<td>"; echo "<a href='quotation_delete.php?po_no=".$row['po_no']."'onclick='return chkConfirm();'><button class='btn btn-danger'>Delete</button></a>";  
                     echo "</td>";
                     ?>
                   </tr>
@@ -133,10 +133,10 @@ include "../users/checkmodule.php"
                       <script language="JavaScript">
                           function chkConfirm()
                           {
-                              if(confirm(' กรุณายืนยันการลบอีกครั้ง !!! '))
-                                {return true;}
-                              else
-                                {return false;}
+                            if(confirm(' กรุณายืนยันการลบอีกครั้ง !!! '))
+                              {return true;}
+                            else
+                              {return false;}
                           }
                           </script>
                   

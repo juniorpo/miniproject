@@ -140,7 +140,7 @@
                           </a>
                         </li>  
                         <li class="nav-item">
-                          <a href="../quotation_purchase/quotation_list.php" class="nav-link">
+                          <a href="../quotation_purchase/purchase_order_list.php" class="nav-link">
                             <i class="fas fa-circle nav-icon"></i>
                             <p>Purchase Order</p>
                           </a>
